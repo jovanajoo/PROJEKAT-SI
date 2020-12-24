@@ -15,6 +15,7 @@ namespace BusinessLayer
         {
             this.productsRepository = new ProductsRepository();
         }
+
         public List<Products> getAllProducts()
         {
             return this.productsRepository.GetAllProducts();
