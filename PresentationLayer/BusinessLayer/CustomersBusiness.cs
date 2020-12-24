@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    class CustomersBusiness
+    public class CustomersBusiness
     {
         public CustomersRepository customersRepository;
         public CustomersBusiness()
