@@ -52,7 +52,7 @@ namespace BusinessLayer
 
         public Products getProductsById(int ProductID)
         {
-            return this.productsRepository.getProductsById(ProductID);
+            return this.productsRepository.GetAllProducts().Where(p => p.ProductID == ProductID).First();
         }
 
 
