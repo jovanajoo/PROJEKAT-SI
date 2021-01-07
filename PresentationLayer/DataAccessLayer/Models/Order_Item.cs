@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Models
 {
-    public class Order_Items
+    public class Order_Item
     {
         public int OrderItemID { get; set; }
         public int Quantity { get; set; }

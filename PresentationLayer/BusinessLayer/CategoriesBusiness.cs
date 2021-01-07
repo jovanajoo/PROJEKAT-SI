@@ -16,14 +16,14 @@ namespace BusinessLayer
             this.categoriesRepository = new CategoriesRepository();
         }
 
-        public List<Categories> getAllCategories()
+        public List<Category> getAllCategories()
         {
             return this.categoriesRepository.GetAllCategories();
         }
 
 
 
-        public bool InsertCategories(Categories c)
+        public bool InsertCategories(Category c)
         {
             if (this.categoriesRepository.InsertCategories(c) > 0)
             {
@@ -51,14 +51,14 @@ namespace BusinessLayer
 
 
 
-        public Categories getCategoriesById(int Id)
+        public Category getCategoriesById(int Id)
         {
             return this.categoriesRepository.GetAllCategories().Where(c => c.CategoryID == Id).First();
         }
 
 
 
-        public bool updateCategoriesById(Categories c)
+        public bool updateCategoriesById(Category c)
         {
             if (this.categoriesRepository.updateCategoriesById(c) > 0)
             {

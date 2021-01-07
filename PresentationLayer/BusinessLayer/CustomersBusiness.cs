@@ -10,20 +10,20 @@ namespace BusinessLayer
 {
     public class CustomersBusiness
     {
-        public CustomersRepository customersRepository;
+        public CustomerRepository customersRepository;
         public CustomersBusiness()
         {
-            this.customersRepository = new CustomersRepository();
+            this.customersRepository = new CustomerRepository();
         }
 
-        public List<Customers> getAllCustomers()
+        public List<Customer> getAllCustomers()
         {
             return this.customersRepository.GetAllCustomers();
         }
 
 
 
-        public bool InsertCustomers(Customers c)
+        public bool InsertCustomers(Customer c)
         {
             if (this.customersRepository.InsertCustomers(c) > 0)
             {
@@ -51,14 +51,14 @@ namespace BusinessLayer
 
 
 
-        public Customers getCustomersById(int Id)
+        public Customer getCustomersById(int Id)
         {
             return this.customersRepository.GetAllCustomers().Where(c => c.CustomerID == Id).First();
         }
 
 
 
-        public bool updateCustomersById(Customers c)
+        public bool updateCustomersById(Customer c)
         {
             if (this.customersRepository.updateCustomersById(c) > 0)
             {

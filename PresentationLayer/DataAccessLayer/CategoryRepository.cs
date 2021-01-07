@@ -8,40 +8,52 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public class OrdersRepository
+    public class CategoryRepository
     {
-        public List<Orders> GetAllOrders()
+        public List<Category> GetAllCategories()
         {
-            List<Orders> results = new List<Orders>();
+            List<Category> results = new List<Category>();
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
-            {
+            {  
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = "SELECT * FROM Orders";
+                sqlCommand.CommandText = "SELECT * FROM Categories";
 
                 sqlConnection.Open();
                 SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
                 while (sqlDataReader.Read())
                 {
-                    Orders o = new Orders();
-                    o.OrderID = sqlDataReader.GetInt32(0);
-                    o.Order_Date = sqlDataReader.GetString(1);
-                    o.Delivery_Date = sqlDataReader.GetString(2);
-                  
-                    results.Add(o);
+                    Category c = new Category();
+                    c.CategoryID = sqlDataReader.GetInt32(0);
+                    c.Name = sqlDataReader.GetString(1);
+                    c.Description = sqlDataReader.GetString(2);
+
+                    results.Add(c);
                 }
             }
             return results;
         }
-        public int deleteOrdersById(int OrderID)
+        public int InsertCategories(Category c)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
+            {
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.CommandText =
+                    string.Format("INSERT INTO Categories VALUES('{0}', '{1}')",
+                    c.Name, c.Description);
+                return sqlCommand.ExecuteNonQuery();
+            }
+        }
+        public int DeleteCategoriesById(int CategoriesID)
         {
             using (SqlConnection sqlConnection = new SqlConnection())
             {
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
                 sqlCommand.CommandText =
-                string.Format("DELETE FROM Orders WHERE OrderID = {0}", OrderID);
+                string.Format("DELETE FROM Categories WHERE CatgeoriesID = {0}", CategoriesID);
 
                 sqlConnection.Open();
 
@@ -49,57 +61,52 @@ namespace DataAccessLayer
 
             }
         }
-        public int InsertOrders(Orders o)
+        public Category GetCategoriesById(int Id)
         {
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
             {
+
+    
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
                 sqlCommand.CommandText =
-                    string.Format("INSERT INTO Orders VALUES('{0}', '{1}')",
-                    o.Delivery_Date,o.Delivery_Date);
-                return sqlCommand.ExecuteNonQuery();
-            }
-        }
-        public Orders getOrdersById(int OrderID)
-        {
-            using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
-            {
-                SqlCommand sqlCommand = new SqlCommand();
-                sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText =
-                string.Format(" SELECT * FROM Orders WHERE OrderID = {0}", OrderID);
+                string.Format(" SELECT * FROM Categories WHERE Id = {0}", Id);
 
                 sqlConnection.Open();
 
                 SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
                 sqlDataReader.Read();
-                Orders o = new Orders();
-                o.OrderID = sqlDataReader.GetInt32(0);
-                o.Order_Date = sqlDataReader.GetString(1);
-                o.Delivery_Date = sqlDataReader.GetString(2);
+                Category c = new Category();
+                c.CategoryID = sqlDataReader.GetInt32(0);
+                c.Name = sqlDataReader.GetString(1);
+                c.Description = sqlDataReader.GetString(2);
+            
 
-
-                return o;
-
+                return c;
             }
-
         }
-        public int updateOrdersById(Orders o)
+
+        public int UpdateCategoriesById(Category c)
         {
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
             {
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
                 sqlCommand.CommandText =
-                string.Format(" UPDATE Orders SET Order_Date = '{0}', Delivery_Date ='{1}'"
-                , o.Order_Date,o.Delivery_Date);
+                string.Format(" UPDATE Categories SET Name = '{0}', Description = '{1}', WHERE CategoryId={2}", c.Name, c.Description);
 
                 sqlConnection.Open();
 
                 return sqlCommand.ExecuteNonQuery();
             }
         }
+
+
+
+
+
+
+
     }
 }
