@@ -13,90 +13,45 @@ namespace DataAccessLayer
         public List<Order_Item> GetAllOrderItems()
         {
             List<Order_Item> results = new List<Order_Item>();
-            using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
-            {
-                SqlCommand sqlCommand = new SqlCommand();
-                sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = "SELECT * FROM Order_Items";
-
-                sqlConnection.Open();
-                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+            SqlDataReader sqlDataReader = DBConnection.GetData("SELECT * FROM Order_Items");
 
                 while (sqlDataReader.Read())
                 {
                     Order_Item oi = new Order_Item();
                     oi.OrderItemID = sqlDataReader.GetInt32(0);
-                    oi.Quantity = sqlDataReader.GetInt32(2);
+                    oi.OrderID = sqlDataReader.GetInt32(1);
+                    oi.ProductID = sqlDataReader.GetInt32(2);
+                    oi.Quantity = sqlDataReader.GetInt32(3);
                     
 
                     results.Add(oi);
                 }
-            }
+            DBConnection.CloseConnection();
             return results;
         }
         public int DeleteOrderItemsById(int OrderItemID)
         {
-            using (SqlConnection sqlConnection = new SqlConnection())
-            {
-                SqlCommand sqlCommand = new SqlCommand();
-                sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText =
-                string.Format("DELETE FROM Order_Items WHERE OrderItemID = {0}", OrderItemID);
+            var result = DBConnection.EditData(string.Format("DELETE FROM Order_Items WHERE OrderItemID = {0}", OrderItemID));
 
-                sqlConnection.Open();
+            DBConnection.CloseConnection();
+            return result;
 
-                return sqlCommand.ExecuteNonQuery();
-
-            }
         }
         public int InsertOrderItems(Order_Item oi)
         {
-            using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
-            {
-                SqlCommand sqlCommand = new SqlCommand();
-                sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText =
-                    string.Format("INSERT INTO Order_Items VALUES({0})",oi.Quantity);
-                return sqlCommand.ExecuteNonQuery();
-            }
+            var result = DBConnection.EditData(string.Format("INSERT INTO Order_Items VALUES({0})",oi.Quantity));
+            DBConnection.CloseConnection();
+            return result;
+            
         }
-        public Order_Item GetOrderItemsById(int OrderItemsID)
-        {
-            using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
-            {
-                SqlCommand sqlCommand = new SqlCommand();
-                sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText =
-                string.Format(" SELECT * FROM Order_Items WHERE OrderItemsID = {0}", OrderItemsID);
-
-                sqlConnection.Open();
-
-                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-
-                sqlDataReader.Read();
-                Order_Item oi = new Order_Item();
-                oi.OrderItemID = sqlDataReader.GetInt32(0);
-                oi.Quantity = sqlDataReader.GetInt32(2);
-
-
-                return oi;
-
-            }
-
-        }
+        
         public int UpdateOrderItemsById(Order_Item oi)
         {
-            using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
-            {
-                SqlCommand sqlCommand = new SqlCommand();
-                sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText =
-                string.Format(" UPDATE Order_Items SET Quantity={0}",oi.Quantity);
+           var result = DBConnection.EditData(string.Format(" UPDATE Order_Items SET Quantity={0}",oi.Quantity));
 
-                sqlConnection.Open();
-
-                return sqlCommand.ExecuteNonQuery();
-            }
+            DBConnection.CloseConnection();
+            return result;
+            
         }
     }
 }
