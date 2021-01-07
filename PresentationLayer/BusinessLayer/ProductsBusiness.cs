@@ -10,20 +10,20 @@ namespace BusinessLayer
 {
     public class ProductsBusiness
     {
-        public ProductsRepository productsRepository;
+        public ProductRepository productsRepository;
         public ProductsBusiness()
         {
-            this.productsRepository = new ProductsRepository();
+            this.productsRepository = new ProductRepository();
         }
 
-        public List<Products> getAllProducts()
+        public List<Product> getAllProducts()
         {
             return this.productsRepository.GetAllProducts();
         }
 
 
 
-        public bool InsertProducts(Products p)
+        public bool InsertProducts(Product p)
         {
             if (this.productsRepository.InsertProducts(p) > 0)
             {
@@ -51,14 +51,14 @@ namespace BusinessLayer
 
 
 
-        public Products getProductsById(int ProductID)
+        public Product getProductsById(int ProductID)
         {
             return this.productsRepository.GetAllProducts().Where(p => p.ProductID == ProductID).First();
         }
 
 
 
-        public bool updateCProductsById(Products p)
+        public bool updateCProductsById(Product p)
         {
             if (this.productsRepository.updateCProductsById(p) > 0)
             {

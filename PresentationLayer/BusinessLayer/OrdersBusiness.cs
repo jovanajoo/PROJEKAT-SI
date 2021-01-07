@@ -10,20 +10,20 @@ namespace BusinessLayer
 {
     class OrdersBusiness
     {
-        public OrdersRepository ordersRepository;
+        public OrderRepository ordersRepository;
         public OrdersBusiness()
         {
-            this.ordersRepository = new OrdersRepository();
+            this.ordersRepository = new OrderRepository();
         }
 
-        public List<Orders> getAllOrders()
+        public List<Order> getAllOrders()
         {
             return this.ordersRepository.GetAllOrders();
         }
 
 
 
-        public bool InsertOrders(Orders o)
+        public bool InsertOrders(Order o)
         {
             if (this.ordersRepository.InsertOrders(o) > 0)
             {
@@ -51,14 +51,14 @@ namespace BusinessLayer
 
 
 
-        public Orders getOrdersById(int OrderID)
+        public Order getOrdersById(int OrderID)
         {
             return this.ordersRepository.GetAllOrders().Where(o => o.OrderID == OrderID).First();
         }
 
 
 
-        public bool updateOrdersById(Orders o)
+        public bool updateOrdersById(Order o)
         {
             if (this.ordersRepository.updateOrdersById(o) > 0)
             {

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Models
 {
-    public class Categories
+    public class Order
     {
-        public int CategoryID { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public int OrderID { get; set; }
+        public string Order_Date { get; set; }
+        public string Delivery_Date { get; set; }
     }
 }

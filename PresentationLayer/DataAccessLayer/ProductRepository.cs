@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public class ProductsRepository
+    public class ProductRepository
     {
-        public List<Products> GetAllProducts()
+        public List<Product> GetAllProducts()
         {
-            List<Products> results = new List<Products>();
+            List<Product> results = new List<Product>();
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
             {
                 SqlCommand sqlCommand = new SqlCommand();
@@ -24,7 +24,7 @@ namespace DataAccessLayer
 
                 while (sqlDataReader.Read())
                 {
-                    Products p = new Products();
+                    Product p = new Product();
                     p.ProductID = sqlDataReader.GetInt32(0);
                     p.Name = sqlDataReader.GetString(1);
                     p.Price = sqlDataReader.GetDouble(2);
@@ -37,7 +37,7 @@ namespace DataAccessLayer
             }
             return results;
         }
-        public int deleteProductsById(int ProductID)
+        public int DeleteProductsById(int ProductID)
         {
             using (SqlConnection sqlConnection = new SqlConnection())
             {
@@ -52,7 +52,7 @@ namespace DataAccessLayer
 
             }
         }
-        public int InsertProducts(Products p)
+        public int InsertProducts(Product p)
         {
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
             {
@@ -64,7 +64,7 @@ namespace DataAccessLayer
                 return sqlCommand.ExecuteNonQuery();
             }
         }
-        public Products getProductsById(int ProductID)
+        public Product GetProductsById(int ProductID)
         {
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
             {
@@ -78,7 +78,7 @@ namespace DataAccessLayer
                 SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
                 sqlDataReader.Read();
-                Products p = new Products();
+                Product p = new Product();
                 p.ProductID = sqlDataReader.GetInt32(0);
                 p.Name = sqlDataReader.GetString(1);
                 p.Price = sqlDataReader.GetDouble(2);
@@ -90,7 +90,7 @@ namespace DataAccessLayer
             }
 
         }
-        public int updateCProductsById(Products p)
+        public int UpdateCProductsById(Product p)
         {
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
             {

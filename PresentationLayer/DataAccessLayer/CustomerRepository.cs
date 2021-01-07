@@ -8,40 +8,44 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public class Order_ItemsRepository
+    public class CustomerRepository
     {
-        public List<Order_Items> GetAllOrderItems()
+        public List<Customer> GetAllCustomers()
         {
-            List<Order_Items> results = new List<Order_Items>();
+            List<Customer> results = new List<Customer>();
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
             {
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = "SELECT * FROM Order_Items";
+                sqlCommand.CommandText = "SELECT * FROM Customers";
 
                 sqlConnection.Open();
                 SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
                 while (sqlDataReader.Read())
                 {
-                    Order_Items oi = new Order_Items();
-                    oi.OrderItemID = sqlDataReader.GetInt32(0);
-                    oi.Quantity = sqlDataReader.GetInt32(2);
-                    
+                    Customer c = new Customer();
+                    c.CustomerID = sqlDataReader.GetInt32(0);
+                    c.Name = sqlDataReader.GetString(1);
+                    c.Surname = sqlDataReader.GetString(2);
+                    c.Email = sqlDataReader.GetString(3);
+                    c.City = sqlDataReader.GetString(4);
+                    c.Address = sqlDataReader.GetString(5);
+                    c.PhoneNumber = sqlDataReader.GetString(6);
 
-                    results.Add(oi);
+                    results.Add(c);
                 }
             }
             return results;
         }
-        public int deleteOrderItemsById(int OrderItemID)
+        public int DeleteCustomersById(int Id)
         {
             using (SqlConnection sqlConnection = new SqlConnection())
             {
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
                 sqlCommand.CommandText =
-                string.Format("DELETE FROM Order_Items WHERE OrderItemID = {0}", OrderItemID);
+                string.Format("DELETE FROM Customers WHERE Id = {0}", Id);
 
                 sqlConnection.Open();
 
@@ -49,49 +53,53 @@ namespace DataAccessLayer
 
             }
         }
-        public int InsertOrderItems(Order_Items oi)
+        public int InsertCustomers(Customer c)
         {
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
             {
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
                 sqlCommand.CommandText =
-                    string.Format("INSERT INTO Order_Items VALUES({0})",oi.Quantity);
+                    string.Format("INSERT INTO Customers VALUES('{0}', '{1}','{2}', '{3}','{4}', '{5}')",
+                    c.Name, c.Surname, c.Email, c.City, c.Address, c.PhoneNumber);
                 return sqlCommand.ExecuteNonQuery();
             }
         }
-        public Order_Items getOrderItemsById(int OrderItemsID)
+        public Customer GetCustomersById(int Id)
         {
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
             {
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
                 sqlCommand.CommandText =
-                string.Format(" SELECT * FROM Order_Items WHERE OrderItemsID = {0}", OrderItemsID);
+                string.Format(" SELECT * FROM Customers WHERE Id = {0}", Id);
 
                 sqlConnection.Open();
 
                 SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
                 sqlDataReader.Read();
-                Order_Items oi = new Order_Items();
-                oi.OrderItemID = sqlDataReader.GetInt32(0);
-                oi.Quantity = sqlDataReader.GetInt32(2);
+                Customer c = new Customer();
+                c.CustomerID = sqlDataReader.GetInt32(0);
+                c.Name = sqlDataReader.GetString(1);
+                c.Surname = sqlDataReader.GetString(2);
+                c.Email = sqlDataReader.GetString(3);
+                c.City = sqlDataReader.GetString(4);
+                c.Address = sqlDataReader.GetString(5);
+                c.PhoneNumber = sqlDataReader.GetString(6);
 
-
-                return oi;
-
+                return c;
             }
-
         }
-        public int updateOrderItemsById(Order_Items oi)
+        public int UpdateCustomersById(Customer c)
         {
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
             {
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
                 sqlCommand.CommandText =
-                string.Format(" UPDATE Order_Items SET Quantity={0}",oi.Quantity);
+                string.Format(" UPDATE Customers SET Name = '{0}', Surname = '{1}',Email ='{2}',City ='{3}', Address='{4}', PhoneNumber= '{5}', WHERE CustomerID={2}"
+                , c.Name, c.Surname, c.Email, c.City, c.Address, c.PhoneNumber);
 
                 sqlConnection.Open();
 
@@ -99,4 +107,5 @@ namespace DataAccessLayer
             }
         }
     }
+       
 }
