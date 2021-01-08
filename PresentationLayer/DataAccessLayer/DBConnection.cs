@@ -17,7 +17,7 @@ namespace DataAccessLayer
         private DBConnection()
         {
         }
-        
+
         private static SqlConnection SqlConnection
         {
             get
@@ -34,7 +34,7 @@ namespace DataAccessLayer
         {
             get
             {
-                if(sqlCommand == null)
+                if (sqlCommand == null)
                 {
                     sqlCommand = new SqlCommand
                     {
@@ -46,21 +46,21 @@ namespace DataAccessLayer
         }
         private static void OpenConnection()
         {
-            if(sqlConnection != null)
+            if (sqlConnection != null)
             {
                 sqlConnection.Open();
             }
         }
         public static void CloseConnection()
         {
-            if(sqlConnection != null)
+            if (sqlConnection != null)
             {
                 sqlConnection.Close();
             }
         }
         public static SqlDataReader GetData(string commandText)
         {
-            if(SqlConnection != null && SqlCommand != null)
+            if (SqlConnection != null && SqlCommand != null)
             {
                 OpenConnection();
                 sqlCommand.CommandText = commandText;
