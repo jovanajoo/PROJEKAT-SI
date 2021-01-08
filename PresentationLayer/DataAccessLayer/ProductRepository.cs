@@ -25,7 +25,7 @@ namespace DataAccessLayer
                     p.Price = sqlDataReader.GetDouble(3);
                     p.Size = sqlDataReader.GetInt32(4);
                     p.Description = sqlDataReader.GetString(5);
-                    p.b = sqlDataReader.GetBytes(5, 0, p.ProductImage, 0, Int32.MaxValue);
+                    long b= sqlDataReader.GetBytes(5, 0, p.ProductImage, 0, Int32.MaxValue);
 
                 results.Add(p);
 
