@@ -8,24 +8,24 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public class ProductsBusiness
+    public class ProductBusiness
     {
-        public ProductRepository productsRepository;
-        public ProductsBusiness()
+        public ProductRepository productRepository;
+        public ProductBusiness()
         {
-            this.productsRepository = new ProductRepository();
+            this.productRepository = new ProductRepository();
         }
 
-        public List<Product> getAllProducts()
+        public List<Product> GetAllProducts()
         {
-            return this.productsRepository.GetAllProducts();
+            return this.productRepository.GetAllProducts();
         }
 
 
 
         public bool InsertProducts(Product p)
         {
-            if (this.productsRepository.InsertProducts(p) > 0)
+            if (this.productRepository.InsertProducts(p) > 0)
             {
                 return true;
             }
@@ -37,9 +37,9 @@ namespace BusinessLayer
 
 
 
-        public bool deleteProductsById(int ProductID)
+        public bool DeleteProductsById(int ProductID)
         {
-            if (this.productsRepository.deleteProductsById(ProductID) > 0)
+            if (this.productRepository.DeleteProductsById(ProductID) > 0)
             {
                 return true;
             }
@@ -51,16 +51,16 @@ namespace BusinessLayer
 
 
 
-        public Product getProductsById(int ProductID)
+        public Product GetProductsById(int ProductID)
         {
-            return this.productsRepository.GetAllProducts().Where(p => p.ProductID == ProductID).First();
+            return this.productRepository.GetAllProducts().Where(p => p.ProductID == ProductID).First();
         }
 
 
 
-        public bool updateCProductsById(Product p)
+        public bool UpdateCProductsById(Product p)
         {
-            if (this.productsRepository.updateCProductsById(p) > 0)
+            if (this.productRepository.UpdateCProductsById(p) > 0)
             {
                 return true;
             }
