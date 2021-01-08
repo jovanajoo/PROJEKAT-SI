@@ -8,14 +8,13 @@ namespace DataAccessLayer.Models
 {
     public class Product
     {
-        internal byte[] ProductImage;
-
+   
         public int ProductID { get; set; }
         public int CategoryID { get; set; }
         public string Name { get; set; }
         public double Price { get; set; }
         public int Size { get; set; }
         public string Description { get; set; }
-        public long b { get; set; }
+        public byte[] ProductImage { get; set; }
     }
 }
