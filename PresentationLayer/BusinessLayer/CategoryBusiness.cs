@@ -8,24 +8,24 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public class CategoriesBusiness
+    public class CategoryBusiness
     {
-        public CategoriesRepository categoriesRepository;
-        public CategoriesBusiness()
+        public CategoryRepository categoryRepository;
+        public CategoryBusiness()
         {
-            this.categoriesRepository = new CategoriesRepository();
+            this.categoryRepository = new CategoryRepository();
         }
 
-        public List<Category> getAllCategories()
+        public List<Category> GetAllCategories()
         {
-            return this.categoriesRepository.GetAllCategories();
+            return this.categoryRepository.GetAllCategories();
         }
 
 
 
         public bool InsertCategories(Category c)
         {
-            if (this.categoriesRepository.InsertCategories(c) > 0)
+            if (this.categoryRepository.InsertCategories(c) > 0)
             {
                 return true;
             }
@@ -37,9 +37,9 @@ namespace BusinessLayer
 
 
 
-        public bool deleteCategoriesById(int CategoriesID)
+        public bool DeleteCategoriesById(int CategoriesID)
         {
-            if (this.categoriesRepository.deleteCategoriesById(CategoriesID) > 0)
+            if (this.categoryRepository.DeleteCategoriesById(CategoriesID) > 0)
             {
                 return true;
             }
@@ -51,16 +51,16 @@ namespace BusinessLayer
 
 
 
-        public Category getCategoriesById(int Id)
+        public Category GetCategoriesById(int Id)
         {
             return this.categoriesRepository.GetAllCategories().Where(c => c.CategoryID == Id).First();
         }
 
 
 
-        public bool updateCategoriesById(Category c)
+        public bool UpdateCategoriesById(Category c)
         {
-            if (this.categoriesRepository.updateCategoriesById(c) > 0)
+            if (this.categoryRepository.UpdateCategoriesById(c) > 0)
             {
                 return true;
             }

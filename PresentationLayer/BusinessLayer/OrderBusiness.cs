@@ -8,24 +8,24 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    class OrdersBusiness
+    class OrderBusiness
     {
-        public OrderRepository ordersRepository;
-        public OrdersBusiness()
+        public OrderRepository orderRepository;
+        public OrderBusiness()
         {
-            this.ordersRepository = new OrderRepository();
+            this.orderRepository = new OrderRepository();
         }
 
-        public List<Order> getAllOrders()
+        public List<Order> GetAllOrders()
         {
-            return this.ordersRepository.GetAllOrders();
+            return this.orderRepository.GetAllOrders();
         }
 
 
 
         public bool InsertOrders(Order o)
         {
-            if (this.ordersRepository.InsertOrders(o) > 0)
+            if (this.orderRepository.InsertOrders(o) > 0)
             {
                 return true;
             }
@@ -37,9 +37,9 @@ namespace BusinessLayer
 
 
 
-        public bool deleteOrdersById(int OrderID)
+        public bool DeleteOrdersById(int OrderID)
         {
-            if (this.ordersRepository.deleteOrdersById(OrderID) > 0)
+            if (this.orderRepository.DeleteOrdersById(OrderID) > 0)
             {
                 return true;
             }
@@ -51,16 +51,16 @@ namespace BusinessLayer
 
 
 
-        public Order getOrdersById(int OrderID)
+        public Order GetOrdersById(int OrderID)
         {
-            return this.ordersRepository.GetAllOrders().Where(o => o.OrderID == OrderID).First();
+            return this.orderRepository.GetAllOrders().Where(o => o.OrderID == OrderID).First();
         }
 
 
 
-        public bool updateOrdersById(Order o)
+        public bool UpdateOrdersById(Order o)
         {
-            if (this.ordersRepository.updateOrdersById(o) > 0)
+            if (this.orderRepository.updateOrdersById(o) > 0)
             {
                 return true;
             }
