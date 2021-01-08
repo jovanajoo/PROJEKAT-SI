@@ -22,7 +22,6 @@ namespace BusinessLayer
         }
 
 
-
         public bool InsertCustomers(Customer c)
         {
             if (this.customerRepository.InsertCustomers(c) > 0)

@@ -21,8 +21,6 @@ namespace BusinessLayer
             return this.orderRepository.GetAllOrders();
         }
 
-
-
         public bool InsertOrders(Order o)
         {
             if (this.orderRepository.InsertOrders(o) > 0)

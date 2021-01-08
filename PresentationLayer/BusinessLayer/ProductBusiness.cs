@@ -21,8 +21,6 @@ namespace BusinessLayer
             return this.productRepository.GetAllProducts();
         }
 
-
-
         public bool InsertProducts(Product p)
         {
             if (this.productRepository.InsertProducts(p) > 0)

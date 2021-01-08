@@ -21,8 +21,6 @@ namespace BusinessLayer
             return this.categoryRepository.GetAllCategories();
         }
 
-
-
         public bool InsertCategories(Category c)
         {
             if (this.categoryRepository.InsertCategories(c) > 0)
