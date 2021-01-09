@@ -117,29 +117,63 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuTextBoxPassword.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQQAAAApCAYAAADTTVdWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABJSURBVHhe7cNBDQAwCASw+TfFOQNU7EOb9AEAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwR5LarV6fHqXaS+ryGbvYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuTextBoxPhone.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQQAAAApCAYAAADTTVdWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABJSURBVHhe7cNBDQAwCASw+TfFOQNU7EOb9AEAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwR5LarV6fHqXaS+ryGbvYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuTextBoxAddress.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQQAAAApCAYAAADTTVdWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABJSURBVHhe7cNBDQAwCASw+TfFOQNU7EOb9AEAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwR5LarV6fHqXaS+ryGbvYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuTextBoxNameS.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQQAAAApCAYAAADTTVdWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABJSURBVHhe7cNBDQAwCASw+TfFOQNU7EOb9AEAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwR5LarV6fHqXaS+ryGbvYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuTextBoxEmail.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQQAAAApCAYAAADTTVdWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABJSURBVHhe7cNBDQAwCASw+TfFOQNU7EOb9AEAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwR5LarV6fHqXaS+ryGbvYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuTextBoxCity.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQQAAAApCAYAAADTTVdWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABJSURBVHhe7cNBDQAwCASw+TfFOQNU7EOb9AEAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwR5LarV6fHqXaS+ryGbvYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuTextBoxUserName.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQQAAAApCAYAAADTTVdWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABJSURBVHhe7cNBDQAwCASw+TfFOQNU7EOb9AEAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwR5LarV6fHqXaS+ryGbvYAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="bunifuButtonRegistration.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAJoAAAAnCAYAAAD3q1G8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACSSURBVHhe7dIhAYBAAMBA4n2HR9KaGASAD4CEqROnZrcd
-        Y57H2G/4zzzXaG8BvmU0EkYjYTQSRiNhNBJGI2E0EkYjYTQSRiNhNBJGI2E0EkYjYTQSRiNhNBJGI2E0
-        EkYjYTQSRiNhNBJGI2E0EkYjYTQSRiNhNBJGI2E0EkYjYTQSRiNhNBJGI7FGm9dbgO/M6wEQ6pKYvCPb
-        zgAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAMUAAAAvCAYAAABT5w4UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACtSURBVHhe7dNBDcJAAADBykMET+wByfXcIKMCCtcXWQ3z
+        mGQN7PZ+vj5zzhOY5/phW/G43YGf9YMp4I8pIEwBYQoIU0CYAsIUEKaAMAWEKSBMAWEKCFNAmALCFBCm
+        gDAFhCkgTAFhCghTQJgCwhQQpoAwBYQpIEwBYQoIU0CYAsIUEKaAMAWEKSBMAWEKCFNAmALCFBCmgDAF
+        hCkgTAFhCohrin2MYwUwz32M4wvpTGDV76CroQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuButtonLogin.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAJoAAAAnCAYAAAD3q1G8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACSSURBVHhe7dIhAYBAAMBA4n2HR9KaGASAD4CEqROnZrcd
-        Y57H2G/4zzzXaG8BvmU0EkYjYTQSRiNhNBJGI2E0EkYjYTQSRiNhNBJGI2E0EkYjYTQSRiNhNBJGI2E0
-        EkYjYTQSRiNhNBJGI2E0EkYjYTQSRiNhNBJGI2E0EkYjYTQSRiNhNBJGI7FGm9dbgO/M6wEQ6pKYvCPb
-        zgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
-  </metadata>
 </root>
