@@ -37,7 +37,7 @@ namespace BusinessLayer
 
         public bool DeleteOrderItemsById(int OrderItemID)
         {
-            if (this.order_ItemRepository.deleteOrderItemsById(OrderItemID) > 0)
+            if (this.order_ItemRepository.DeleteOrderItemsById(OrderItemID) > 0)
             {
                 return true;
             }
@@ -58,7 +58,7 @@ namespace BusinessLayer
 
         public bool UpdateOrderItemsById(Order_Item oi)
         {
-            if (this.order_ItemRepository.updateOrderItemsById(oi) > 0)
+            if (this.order_ItemRepository.UpdateOrderItemsById(oi) > 0)
             {
                 return true;
             }
