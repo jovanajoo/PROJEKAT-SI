@@ -67,8 +67,8 @@ namespace BusinessLayer
             {
                 return false;
             }
-        
 
+        }
             public Customer GetCustomersByUserAndPass (string User, string Pass)
             {
                 return this.customerRepository.GetAllCustomers().FirstOrDefault(c =>
