@@ -41,12 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoriesBusiness.cs" />
-    <Compile Include="CustomersBusiness.cs" />
-    <Compile Include="OrdersBusiness.cs" />
-    <Compile Include="Order_ItemsBusiness.cs" />
-    <Compile Include="ProductsBusiness.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CategoryBusiness.cs" />
+    <Compile Include="CustomerBusiness.cs" />
+    <Compile Include="OrderBusiness.cs" />
+    <Compile Include="Order_ItemBusiness.cs" />
+    <Compile Include="ProductBusiness.cs" />
+    <Compile Include="AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
