@@ -58,7 +58,7 @@ namespace BusinessLayer
 
         public bool UpdateOrdersById(Order o)
         {
-            if (this.orderRepository.updateOrdersById(o) > 0)
+            if (this.orderRepository.UpdateOrdersById(o) > 0)
             {
                 return true;
             }
