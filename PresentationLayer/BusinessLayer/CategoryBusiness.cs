@@ -51,7 +51,7 @@ namespace BusinessLayer
 
         public Category GetCategoriesById(int Id)
         {
-            return this.categoriesRepository.GetAllCategories().Where(c => c.CategoryID == Id).First();
+            return this.categoryRepository.GetAllCategories().Where(c => c.CategoryID == Id).First();
         }
 
 
