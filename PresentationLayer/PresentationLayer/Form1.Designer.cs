@@ -30,8 +30,8 @@ namespace PresentationLayer
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,6 +61,7 @@ namespace PresentationLayer
             this.addProductToolStripMenuItem.Name = "addProductToolStripMenuItem";
             this.addProductToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
             this.addProductToolStripMenuItem.Text = "Add product";
+            this.addProductToolStripMenuItem.Click += new System.EventHandler(this.addProductToolStripMenuItem_Click);
             // 
             // deleteProductToolStripMenuItem
             // 
@@ -104,11 +105,11 @@ namespace PresentationLayer
             this.bunifuButtonRegistration.ColorContrastOnClick = 45;
             this.bunifuButtonRegistration.ColorContrastOnHover = 45;
             this.bunifuButtonRegistration.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.bunifuButtonRegistration.CustomizableEdges = borderEdges3;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.bunifuButtonRegistration.CustomizableEdges = borderEdges1;
             this.bunifuButtonRegistration.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButtonRegistration.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButtonRegistration.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -194,11 +195,11 @@ namespace PresentationLayer
             this.bunifuButtonLogin.ColorContrastOnClick = 45;
             this.bunifuButtonLogin.ColorContrastOnHover = 45;
             this.bunifuButtonLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.bunifuButtonLogin.CustomizableEdges = borderEdges4;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.bunifuButtonLogin.CustomizableEdges = borderEdges2;
             this.bunifuButtonLogin.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButtonLogin.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButtonLogin.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -272,6 +273,8 @@ namespace PresentationLayer
             this.ClientSize = new System.Drawing.Size(1037, 512);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
