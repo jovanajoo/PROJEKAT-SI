@@ -325,6 +325,7 @@ namespace PresentationLayer
             this.ClientSize = new System.Drawing.Size(824, 580);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Login";
             this.Text = "Login";
             this.panel1.ResumeLayout(false);
