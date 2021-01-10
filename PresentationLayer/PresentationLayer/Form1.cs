@@ -32,5 +32,11 @@ namespace PresentationLayer
             Registration rg = new Registration();
             rg.ShowDialog();
         }
+
+        private void addProductToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddProduct ap = new AddProduct();
+            ap.ShowDialog();
+        }
     }
 }
