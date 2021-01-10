@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DataAccessLayer
 {
     public class ProductRepository
-    {
+    { 
         public List<Product> GetAllProducts()
         {
             List<Product> results = new List<Product>();
@@ -19,13 +19,13 @@ namespace DataAccessLayer
                 while (sqlDataReader.Read())
                 {
                     Product p = new Product();
-                    p.ProductID = sqlDataReader.GetInt32(0);
-                    p.CategoryID = sqlDataReader.GetInt32(1);
-                    p.Name = sqlDataReader.GetString(2);
-                    p.Price = sqlDataReader.GetDouble(3);
-                    p.Size = sqlDataReader.GetInt32(4);
-                    p.Description = sqlDataReader.GetString(5);
+                    p.ProductID = sqlDataReader.GetInt32(0); 
+                    p.Name = sqlDataReader.GetString(1);
+                    p.Price = sqlDataReader.GetDecimal(2);
+                    p.Size = sqlDataReader.GetInt32(3);
+                    p.Description = sqlDataReader.GetString(4);
                     long b= sqlDataReader.GetBytes(5, 0, p.ProductImage, 0, Int32.MaxValue);
+                    p.CategoryID = sqlDataReader.GetInt32(6);
 
                 results.Add(p);
 
@@ -45,8 +45,8 @@ namespace DataAccessLayer
         }
         public int InsertProducts(Product p)
         {
-            var result = DBConnection.EditData(string.Format("INSERT INTO Products VALUES('{0}', '{1}','{2}', '{3}')",
-                    p.Name, p.Price, p.Size, p.Description));
+            var result = DBConnection.EditData(string.Format("INSERT INTO Products VALUES('{0}', '{1}','{2}', '{3}','{4}','{5}')",
+                    p.Name, p.Price, p.Size, p.Description, p.ProductImage, p.CategoryID));
             DBConnection.CloseConnection();
             return result;
                 
@@ -54,8 +54,8 @@ namespace DataAccessLayer
        
         public int UpdateCProductsById(Product p)
         {
-                var result = DBConnection.EditData(string.Format(" UPDATE Products SET Name = '{0}', Price = {1},Size ={2},Description ='{3}'"
-                , p.Name,p.Price,p.Size,p.Description));
+                var result = DBConnection.EditData(string.Format(" UPDATE Products SET Name = '{0}', Price = {1},Size ={2},Description ='{3}', CategoryId = '{4}'"
+                , p.Name,p.Price,p.Size,p.Description,p.CategoryID));
 
             DBConnection.CloseConnection();
             return result;
