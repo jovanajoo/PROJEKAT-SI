@@ -118,6 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuButtonL.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAVoAAAAmCAYAAACFxlN4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACpSURBVHhe7dSxDYRAAMTA679FyiBfXi9RAs5mIlfgs+16
+        AEj8H3veBiBitAAxowWIGS1AzGgBYkYLEDNagJjRAsSMFiBmtAAxowWIGS1AzGgBYkYLEDNagJjRAsSM
+        FiBmtAAxowWIGS1AzGgBYkYLEDNagJjRAsSMFiBmtAAxowWIGS1AzGgBYkYLEDNagJjRAsSMFiBmtAAx
+        owWIGS1A7Gy73wbgY9vuH76nrhmzcLVFAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="bunifuTextBoxPassword.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQQAAAApCAYAAADTTVdWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -169,11 +178,11 @@
   </data>
   <data name="bunifuButtonRegistration.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAMUAAAAvCAYAAABT5w4UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACtSURBVHhe7dNBDcJAAADBykMET+wByfXcIKMCCtcXWQ3z
-        mGQN7PZ+vj5zzhOY5/phW/G43YGf9YMp4I8pIEwBYQoIU0CYAsIUEKaAMAWEKSBMAWEKCFNAmALCFBCm
-        gDAFhCkgTAFhCghTQJgCwhQQpoAwBYQpIEwBYQoIU0CYAsIUEKaAMAWEKSBMAWEKCFNAmALCFBCmgDAF
-        hCkgTAFhCohrin2MYwUwz32M4wvpTGDV76CroQAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAQQAAAAvCAYAAAAFFLRLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAC5SURBVHhe7dRBDcJAAADBykMEz9oDkuu5QUYFQK6PNdF5
+        TLIKdvu83t855w+4t/WCbcX+eAI3t15gCMDFEIAYAhBDAGIIQAwBiCEAMQQghgDEEIAYAhBDAGIIQAwB
+        iCEAMQQghgDEEIAYAhBDAGIIQAwBiCEAMQQghgDEEIAYAhBDAGIIQAwBiCEAMQQghgDEEIAYAhBDAGII
+        QAwBiCEAMQQghgDEEIAYAhBDAHIN4RjjXAHc2zHG+Qd2YF0MmbDP9gAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>

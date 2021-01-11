@@ -20,6 +20,10 @@ namespace PresentationLayer
             this.customerBusiness = new CustomerBusiness();
             InitializeComponent();
         }
+        private void Registration_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
@@ -40,6 +44,13 @@ namespace PresentationLayer
             {
                 MessageBox.Show("Enter username or password!");
             }
+        }
+
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Registration rg = new Registration();
+            rg.ShowDialog();
         }
     }
 }
