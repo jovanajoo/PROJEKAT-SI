@@ -21,12 +21,6 @@ namespace PresentationLayer
             InitializeComponent();
         }
 
-        private void bunifuButtonLogin_Click(object sender, EventArgs e)
-        {
-            Login lg = new Login();
-            lg.ShowDialog();
-        }
-
         private void bunifuButtonRegistration_Click(object sender, EventArgs e)
         {
             Registration rg = new Registration();
@@ -37,6 +31,18 @@ namespace PresentationLayer
         {
             AddProduct ap = new AddProduct();
             ap.ShowDialog();
+        }
+
+        private void deleteProductToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteProduct dp = new DeleteProduct();
+            dp.ShowDialog();
+        }
+
+        private void bunifuButtonLogin_Click_1(object sender, EventArgs e)
+        {
+            Login lg = new Login();
+            lg.ShowDialog();
         }
     }
 }
