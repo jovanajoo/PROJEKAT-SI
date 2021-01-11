@@ -36,7 +36,7 @@ namespace DataAccessLayer
         }
         public int DeleteProductsById(int ProductID)
         {
-           var result = DBConnection.EditData(string.Format("DELETE FROM Customers WHERE ProductID = {0}", ProductID));
+           var result = DBConnection.EditData(string.Format("DELETE FROM Products WHERE ProductID = {0}", ProductID));
 
             DBConnection.CloseConnection();
             return result;
