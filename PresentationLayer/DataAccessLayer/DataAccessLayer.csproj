@@ -42,18 +42,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoryRepository.cs" />
-    <Compile Include="Constants.cs" />
     <Compile Include="CustomerRepository.cs" />
     <Compile Include="DBConnection.cs" />
-    <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\Order.cs" />
-    <Compile Include="Models\Order_Item.cs" />
-    <Compile Include="Models\Product.cs" />
     <Compile Include="OrderRepository.cs" />
     <Compile Include="Order_ItemRepository.cs" />
     <Compile Include="ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{aa3e2e1d-ecdd-4976-b4ca-86cae6415f24}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

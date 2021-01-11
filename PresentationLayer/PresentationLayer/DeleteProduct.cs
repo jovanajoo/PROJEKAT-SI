@@ -27,8 +27,8 @@ namespace PresentationLayer
 
         private void DeleteProduct_Load(object sender, EventArgs e)
         {
-            List<DataAccessLayer.Models.Product> products = this.productBusiness.GetAllProducts();
-            foreach (DataAccessLayer.Models.Product p in products)
+            List<Shared.Models.Product> products = this.productBusiness.GetAllProducts();
+            foreach (Shared.Models.Product p in products)
             {
                 bunifuDropdownById.Items.Add(p.ProductID);
             }
@@ -36,7 +36,7 @@ namespace PresentationLayer
 
         private void bunifuDropdownById_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataAccessLayer.Models.Product p = this.productBusiness.GetProductsById(Convert.ToInt32(bunifuDropdownById.Text));
+            Shared.Models.Product p = this.productBusiness.GetProductsById(Convert.ToInt32(bunifuDropdownById.Text));
 
             bunifuTextBoxName.Text = p.Name;
             bunifuTextBoxPrice.Text = Convert.ToString(p.Price);
@@ -58,9 +58,9 @@ namespace PresentationLayer
                 {
                     MessageBox.Show("Product is deleted!");
 
-                    List<DataAccessLayer.Models.Product> products = this.productBusiness.GetAllProducts();
+                    List<Shared.Models.Product> products = this.productBusiness.GetAllProducts();
                     bunifuDropdownById.Items.Clear();
-                    foreach (DataAccessLayer.Models.Product p in products)
+                    foreach (Shared.Models.Product p in products)
                     {
                         bunifuDropdownById.Items.Add(p.ProductID);
                     }

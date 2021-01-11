@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shared.Interfaces.Repository
 {
-    interface IProductRepository
+    public interface IProductRepository
     {
     }
 }

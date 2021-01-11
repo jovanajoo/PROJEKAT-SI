@@ -273,9 +273,9 @@
       <Project>{c20c4cfd-6199-4dad-9748-16a18b496663}</Project>
       <Name>BusinessLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
-      <Project>{e74c97cc-2624-4598-b196-9f41b79eb890}</Project>
-      <Name>DataAccessLayer</Name>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{aa3e2e1d-ecdd-4976-b4ca-86cae6415f24}</Project>
+      <Name>Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
