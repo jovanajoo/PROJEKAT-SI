@@ -23,7 +23,7 @@ namespace PresentationLayer
         
         private void AddProduct_Load(object sender, EventArgs e)
         {
-            List<DataAccessLayer.Models.Product> results = this.productBusiness.GetAllProducts();
+            List<Shared.Models.Product> results = this.productBusiness.GetAllProducts();
             bunifuDataGridView1.Columns["ID"].DataPropertyName = "ProductID";
             bunifuDataGridView1.Columns["ProductName"].DataPropertyName = "Name";
             bunifuDataGridView1.Columns["Price"].DataPropertyName = "Price";
@@ -64,7 +64,7 @@ namespace PresentationLayer
 
         private void bunifuButtonSaveData_Click(object sender, EventArgs e)
         {
-            DataAccessLayer.Models.Product p = new DataAccessLayer.Models.Product();
+        Shared.Models.Product p = new Shared.Models.Product();
             try
             {
                 p.Name = bunifuTextBoxName.Text;

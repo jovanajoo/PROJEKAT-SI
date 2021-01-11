@@ -1,14 +1,12 @@
-﻿using DataAccessLayer.Models;
-using System;
+﻿
+using Shared.Interfaces.Repository;
+using Shared.Models;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public class CategoryRepository
+    public class CategoryRepository : ICategoryRepository
     {
         public List<Category> GetAllCategories()
         {
