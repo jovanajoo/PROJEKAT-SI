@@ -1,11 +1,12 @@
 ﻿
+using Shared.Interfaces.Repository;
 using Shared.Models;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace DataAccessLayer
 {
-    public class CategoryRepository
+    public class CategoryRepository : ICategoryRepository
     {
         public List<Category> GetAllCategories()
         {
