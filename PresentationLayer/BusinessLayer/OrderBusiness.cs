@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    class OrderBusiness : IOrderBusiness
+   public class OrderBusiness : IOrderBusiness
     {
         private readonly IOrderRepository orderRepository;
         public OrderBusiness(IOrderRepository _orderRepository)
