@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace BusinessLayer
 {
     public class CategoryBusiness : ICategoryBusiness
-    {
+    { 
         private readonly ICategoryRepository categoryRepository;
         public CategoryBusiness(ICategoryRepository _categoryRepository)
         {
