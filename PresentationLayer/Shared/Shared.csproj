@@ -42,6 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Interfaces\Business\ICategoryBusiness.cs" />
+    <Compile Include="Interfaces\Business\ICustomerBusiness.cs" />
+    <Compile Include="Interfaces\Business\IOrderBusiness.cs" />
+    <Compile Include="Interfaces\Business\IOrder_ItemBusiness.cs" />
+    <Compile Include="Interfaces\Business\IProductBusiness.cs" />
     <Compile Include="Interfaces\Repository\ICategoryRepository.cs" />
     <Compile Include="Interfaces\Repository\ICustomerRepository.cs" />
     <Compile Include="Interfaces\Repository\IOrderRepository.cs" />

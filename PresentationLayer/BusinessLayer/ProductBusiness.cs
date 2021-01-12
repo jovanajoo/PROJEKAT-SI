@@ -70,19 +70,6 @@ namespace BusinessLayer
             }
         }
 
-        int IProductBusiness.InsertProducts(Product p)
-        {
-            throw new NotImplementedException();
-        }
-
-        int IProductBusiness.DeleteProductsById(int ProductID)
-        {
-            throw new NotImplementedException();
-        }
-
-        int IProductBusiness.UpdateCProductsById(Product p)
-        {
-            throw new NotImplementedException();
-        }
+    
     }
 }
