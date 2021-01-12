@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using Shared.Interfaces.Business;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +15,10 @@ namespace PresentationLayer
 {
     public partial class AddProduct : Form
     {
-        private readonly ProductBusiness productBusiness;
-        public AddProduct()
+        private readonly IProductBusiness productBusiness;
+        public AddProduct(IProductBusiness _productBusiness)
         {
-            this.productBusiness = new ProductBusiness();
+            this.productBusiness = _productBusiness;
             InitializeComponent();
         }
         

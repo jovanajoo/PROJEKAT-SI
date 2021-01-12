@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using Shared.Interfaces.Business;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -14,10 +15,12 @@ namespace PresentationLayer
 {
     public partial class Registration : Form
     {
-        private readonly CustomerBusiness customerbusiness;
-        public Registration()
+        private readonly ICustomerBusiness customerBusiness;
+        private readonly IProductBusiness productBusiness;
+        public Registration(ICustomerBusiness _customerBusiness, IProductBusiness _productBusiness)
         {
-            this.customerbusiness = new CustomerBusiness();
+            this.customerBusiness = _customerBusiness;
+            this.productBusiness = _productBusiness;
             InitializeComponent();
         }
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
@@ -40,7 +43,7 @@ namespace PresentationLayer
                     Password = bunifuTextBoxPassword.Text
                 };
 
-                if (this.customerbusiness.InsertCustomers(c))
+                if (this.customerBusiness.InsertCustomers(c))
                 {
                     MessageBox.Show("Uspesna registracija");
                     this.DialogResult = DialogResult.OK;
@@ -66,7 +69,7 @@ namespace PresentationLayer
         private void bunifuButtonL_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Login lg = new Login();
+            Login lg = new Login(this.customerBusiness, this.productBusiness);
             lg.ShowDialog();
         }
     }

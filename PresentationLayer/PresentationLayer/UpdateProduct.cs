@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using Shared.Interfaces.Business;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +14,11 @@ namespace PresentationLayer
 {
     public partial class UpdateProduct : Form
     {
-        private readonly ProductBusiness productBusiness;
-        public UpdateProduct()
+        private readonly IProductBusiness productBusiness;
+        public UpdateProduct(IProductBusiness _productBusiness)
         {
-            this.productBusiness = new ProductBusiness();
             InitializeComponent();
+            this.productBusiness = _productBusiness;
         }
         private void UpdateProduct_Load(object sender, EventArgs e)
         {
@@ -49,6 +50,7 @@ namespace PresentationLayer
                 {
                     int id = Convert.ToInt32(bunifuDropdownById.Text);
                     Shared.Models.Product p = new Shared.Models.Product();
+                    p.ProductID = id;
                     p.Name = bunifuTextBoxName.Text;
                     p.Price = Convert.ToDecimal(bunifuTextBoxPrice.Text);
                     p.Size = Convert.ToInt32(bunifuTextBoxSize.Text);

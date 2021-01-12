@@ -14,5 +14,6 @@ namespace Shared.Interfaces.Business
         bool DeleteCustomersById(int Id);
         Customer GetCustomersById(int Id);
         bool UpdateCustomersById(Customer c);
+        Customer GetCustomersByUserAndPass(string User, string Pass);
     }
 }
