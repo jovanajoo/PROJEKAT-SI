@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer;
+using Shared.Interfaces.Business;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public class CategoryBusiness
+    public class CategoryBusiness : ICategoryBusiness
     {
         public CategoryRepository categoryRepository;
         public CategoryBusiness()
@@ -66,6 +67,21 @@ namespace BusinessLayer
             {
                 return false;
             }
+        }
+
+        int ICategoryBusiness.InsertCategories(Category c)
+        {
+            throw new NotImplementedException();
+        }
+
+        int ICategoryBusiness.DeleteCategoriesById(int CategoriesID)
+        {
+            throw new NotImplementedException();
+        }
+
+        int ICategoryBusiness.UpdateCategoriesById(Category c)
+        {
+            throw new NotImplementedException();
         }
     }
 }

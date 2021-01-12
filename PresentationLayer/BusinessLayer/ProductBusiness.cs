@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer;
+using Shared.Interfaces.Business;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public class ProductBusiness
+    public class ProductBusiness : IProductBusiness
     {
         public ProductRepository productRepository;
         public ProductBusiness()
@@ -66,6 +67,21 @@ namespace BusinessLayer
             {
                 return false;
             }
+        }
+
+        int IProductBusiness.InsertProducts(Product p)
+        {
+            throw new NotImplementedException();
+        }
+
+        int IProductBusiness.DeleteProductsById(int ProductID)
+        {
+            throw new NotImplementedException();
+        }
+
+        int IProductBusiness.UpdateCProductsById(Product p)
+        {
+            throw new NotImplementedException();
         }
     }
 }

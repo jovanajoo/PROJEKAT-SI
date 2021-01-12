@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer;
+using Shared.Interfaces.Business;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    class OrderBusiness
+    class OrderBusiness : IOrderBusiness
     {
         public OrderRepository orderRepository;
         public OrderBusiness()
@@ -66,6 +67,21 @@ namespace BusinessLayer
             {
                 return false;
             }
+        }
+
+        int IOrderBusiness.InsertOrders(Order o)
+        {
+            throw new NotImplementedException();
+        }
+
+        int IOrderBusiness.DeleteOrdersById(int OrderID)
+        {
+            throw new NotImplementedException();
+        }
+
+        int IOrderBusiness.UpdateOrdersById(Order o)
+        {
+            throw new NotImplementedException();
         }
     }
 }
