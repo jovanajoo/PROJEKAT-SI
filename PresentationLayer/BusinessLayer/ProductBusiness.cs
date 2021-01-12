@@ -1,5 +1,6 @@
 ﻿using DataAccessLayer;
 using Shared.Interfaces.Business;
+using Shared.Interfaces.Repository;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -11,10 +12,10 @@ namespace BusinessLayer
 {
     public class ProductBusiness : IProductBusiness
     {
-        public ProductRepository productRepository;
-        public ProductBusiness()
+        private readonly IProductRepository productRepository;
+        public ProductBusiness(IProductRepository _productRepository)
         {
-            this.productRepository = new ProductRepository();
+            this.productRepository = _productRepository;
         }
 
         public List<Product> GetAllProducts()

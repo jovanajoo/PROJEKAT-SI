@@ -1,5 +1,6 @@
 ﻿using DataAccessLayer;
 using Shared.Interfaces.Business;
+using Shared.Interfaces.Repository;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -11,12 +12,11 @@ namespace BusinessLayer
 {
     public class CustomerBusiness : ICustomerBusiness
     {
-        public CustomerRepository customerRepository;
-        public CustomerBusiness()
+        private readonly ICustomerRepository customerRepository;
+        public CustomerBusiness(ICustomerRepository _customerRepository)
         {
-            this.customerRepository = new CustomerRepository();
+            this.customerRepository = _customerRepository;
         }
-
         public List<Customer> GetAllCustomers()
         {
             return this.customerRepository.GetAllCustomers();
