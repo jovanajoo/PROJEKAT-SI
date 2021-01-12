@@ -70,21 +70,21 @@ namespace BusinessLayer
             }
 
         }
-            public Customer GetCustomersByUserAndPass (string User, string Pass)
+        public Customer GetCustomersByUserAndPass(string User, string Pass)
+        {
+            return this.customerRepository.GetAllCustomers().FirstOrDefault(c =>
             {
-                return this.customerRepository.GetAllCustomers().FirstOrDefault(c =>
+                if (c.Username == User && c.Password == Pass)
                 {
-                    if (c.Username == User && c.Password == Pass)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                });
-                
-            }
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            });
+
+        }
 
         int ICustomerBusiness.InsertCustomers(Customer c)
         {
@@ -102,5 +102,5 @@ namespace BusinessLayer
         }
     }
 
- 
+
 }
