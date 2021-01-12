@@ -44,5 +44,11 @@ namespace PresentationLayer
             Login lg = new Login();
             lg.ShowDialog();
         }
+
+        private void updateProductToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateProduct up = new UpdateProduct();
+            up.ShowDialog();
+        }
     }
 }

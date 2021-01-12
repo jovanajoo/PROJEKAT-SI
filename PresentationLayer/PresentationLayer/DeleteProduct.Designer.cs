@@ -52,8 +52,9 @@ namespace PresentationLayer
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuDropdownById = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.label3 = new System.Windows.Forms.Label();
             this.bunifuButtonDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuDropdownById = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuTextBoxCategoryId = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBoxSize = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBoxDescription = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -65,7 +66,6 @@ namespace PresentationLayer
             this.labelCategoryId = new System.Windows.Forms.Label();
             this.labelDescription = new System.Windows.Forms.Label();
             this.labelPrice = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,47 +81,17 @@ namespace PresentationLayer
             this.panel1.Size = new System.Drawing.Size(309, 450);
             this.panel1.TabIndex = 0;
             // 
-            // bunifuDropdownById
+            // label3
             // 
-            this.bunifuDropdownById.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdownById.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuDropdownById.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuDropdownById.BorderRadius = 1;
-            this.bunifuDropdownById.Color = System.Drawing.Color.Silver;
-            this.bunifuDropdownById.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.bunifuDropdownById.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.bunifuDropdownById.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuDropdownById.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.bunifuDropdownById.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.bunifuDropdownById.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.bunifuDropdownById.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.bunifuDropdownById.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.bunifuDropdownById.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.bunifuDropdownById.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.bunifuDropdownById.FillDropDown = true;
-            this.bunifuDropdownById.FillIndicator = false;
-            this.bunifuDropdownById.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bunifuDropdownById.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuDropdownById.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdownById.FormattingEnabled = true;
-            this.bunifuDropdownById.Icon = null;
-            this.bunifuDropdownById.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.bunifuDropdownById.IndicatorColor = System.Drawing.Color.Gray;
-            this.bunifuDropdownById.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.bunifuDropdownById.ItemBackColor = System.Drawing.Color.White;
-            this.bunifuDropdownById.ItemBorderColor = System.Drawing.Color.White;
-            this.bunifuDropdownById.ItemForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdownById.ItemHeight = 26;
-            this.bunifuDropdownById.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDropdownById.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.bunifuDropdownById.ItemTopMargin = 3;
-            this.bunifuDropdownById.Location = new System.Drawing.Point(65, 167);
-            this.bunifuDropdownById.Name = "bunifuDropdownById";
-            this.bunifuDropdownById.Size = new System.Drawing.Size(161, 32);
-            this.bunifuDropdownById.TabIndex = 4;
-            this.bunifuDropdownById.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.bunifuDropdownById.TextLeftMargin = 5;
-            this.bunifuDropdownById.SelectedIndexChanged += new System.EventHandler(this.bunifuDropdownById_SelectedIndexChanged);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(43, 57);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(233, 56);
+            this.label3.TabIndex = 46;
+            this.label3.Text = "Choose Product Id\r\nTo Delete";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuButtonDelete
             // 
@@ -212,6 +182,49 @@ namespace PresentationLayer
             this.bunifuButtonDelete.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButtonDelete.UseDefaultRadiusAndThickness = true;
             this.bunifuButtonDelete.Click += new System.EventHandler(this.bunifuButtonDelete_Click);
+            // 
+            // bunifuDropdownById
+            // 
+            this.bunifuDropdownById.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDropdownById.BackgroundColor = System.Drawing.Color.White;
+            this.bunifuDropdownById.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuDropdownById.BorderRadius = 1;
+            this.bunifuDropdownById.Color = System.Drawing.Color.Silver;
+            this.bunifuDropdownById.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.bunifuDropdownById.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.bunifuDropdownById.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuDropdownById.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.bunifuDropdownById.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.bunifuDropdownById.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.bunifuDropdownById.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.bunifuDropdownById.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.bunifuDropdownById.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bunifuDropdownById.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.bunifuDropdownById.FillDropDown = true;
+            this.bunifuDropdownById.FillIndicator = false;
+            this.bunifuDropdownById.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bunifuDropdownById.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDropdownById.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDropdownById.FormattingEnabled = true;
+            this.bunifuDropdownById.Icon = null;
+            this.bunifuDropdownById.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.bunifuDropdownById.IndicatorColor = System.Drawing.Color.Gray;
+            this.bunifuDropdownById.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.bunifuDropdownById.ItemBackColor = System.Drawing.Color.White;
+            this.bunifuDropdownById.ItemBorderColor = System.Drawing.Color.White;
+            this.bunifuDropdownById.ItemForeColor = System.Drawing.Color.Black;
+            this.bunifuDropdownById.ItemHeight = 26;
+            this.bunifuDropdownById.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuDropdownById.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.bunifuDropdownById.ItemTopMargin = 3;
+            this.bunifuDropdownById.Location = new System.Drawing.Point(65, 167);
+            this.bunifuDropdownById.Name = "bunifuDropdownById";
+            this.bunifuDropdownById.Size = new System.Drawing.Size(161, 32);
+            this.bunifuDropdownById.TabIndex = 4;
+            this.bunifuDropdownById.Text = null;
+            this.bunifuDropdownById.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.bunifuDropdownById.TextLeftMargin = 5;
+            this.bunifuDropdownById.SelectedIndexChanged += new System.EventHandler(this.bunifuDropdownById_SelectedIndexChanged);
             // 
             // bunifuTextBoxCategoryId
             // 
@@ -642,17 +655,6 @@ namespace PresentationLayer
             this.labelPrice.Size = new System.Drawing.Size(54, 25);
             this.labelPrice.TabIndex = 44;
             this.labelPrice.Text = "Price";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 64);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(233, 56);
-            this.label3.TabIndex = 46;
-            this.label3.Text = "Choose Product Id\r\nTo Delete";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DeleteProduct
             // 

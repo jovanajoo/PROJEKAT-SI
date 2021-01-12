@@ -76,6 +76,7 @@ namespace PresentationLayer
             this.updateProductToolStripMenuItem.Name = "updateProductToolStripMenuItem";
             this.updateProductToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
             this.updateProductToolStripMenuItem.Text = "Update product";
+            this.updateProductToolStripMenuItem.Click += new System.EventHandler(this.updateProductToolStripMenuItem_Click);
             // 
             // panel2
             // 
