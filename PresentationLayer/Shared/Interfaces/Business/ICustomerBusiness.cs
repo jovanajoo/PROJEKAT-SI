@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shared.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,9 +10,9 @@ namespace Shared.Interfaces.Business
    public interface ICustomerBusiness
     {
         List<Customer> GetAllCustomers();
-        int InsertCustomers(Customer c);
-        int DeleteCustomersById(int Id);
+        bool InsertCustomers(Customer c);
+        bool DeleteCustomersById(int Id);
         Customer GetCustomersById(int Id);
-        int UpdateCustomersById(Customer c);
+        bool UpdateCustomersById(Customer c);
     }
 }

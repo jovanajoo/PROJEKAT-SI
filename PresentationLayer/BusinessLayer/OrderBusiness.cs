@@ -70,19 +70,6 @@ namespace BusinessLayer
             }
         }
 
-        int IOrderBusiness.InsertOrders(Order o)
-        {
-            throw new NotImplementedException();
-        }
-
-        int IOrderBusiness.DeleteOrdersById(int OrderID)
-        {
-            throw new NotImplementedException();
-        }
-
-        int IOrderBusiness.UpdateOrdersById(Order o)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

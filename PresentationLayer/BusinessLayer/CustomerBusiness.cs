@@ -86,20 +86,7 @@ namespace BusinessLayer
 
         }
 
-        int ICustomerBusiness.InsertCustomers(Customer c)
-        {
-            throw new NotImplementedException();
-        }
-
-        int ICustomerBusiness.DeleteCustomersById(int Id)
-        {
-            throw new NotImplementedException();
-        }
-
-        int ICustomerBusiness.UpdateCustomersById(Customer c)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 
 

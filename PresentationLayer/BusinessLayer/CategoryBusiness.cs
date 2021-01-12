@@ -70,19 +70,6 @@ namespace BusinessLayer
             }
         }
 
-        int ICategoryBusiness.InsertCategories(Category c)
-        {
-            throw new NotImplementedException();
-        }
-
-        int ICategoryBusiness.DeleteCategoriesById(int CategoriesID)
-        {
-            throw new NotImplementedException();
-        }
-
-        int ICategoryBusiness.UpdateCategoriesById(Category c)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

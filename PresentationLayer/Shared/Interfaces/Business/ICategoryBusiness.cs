@@ -10,9 +10,9 @@ namespace Shared.Interfaces.Business
     public interface ICategoryBusiness
     {
         List<Category> GetAllCategories();
-        int InsertCategories(Category c);
-        int DeleteCategoriesById(int CategoriesID);
+        bool InsertCategories(Category c);
+        bool DeleteCategoriesById(int CategoriesID);
         Category GetCategoriesById(int Id);
-        int UpdateCategoriesById(Category c);
+        bool UpdateCategoriesById(Category c);
     }
 }

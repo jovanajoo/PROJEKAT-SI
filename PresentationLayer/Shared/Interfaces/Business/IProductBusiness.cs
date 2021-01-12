@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Shared.Interfaces.Business
 {
-    interface IProductBusiness
+    public interface IProductBusiness
     {
         List<Product> GetAllProducts();
-        int InsertProducts(Product p);
-        int DeleteProductsById(int ProductID);
+        bool InsertProducts(Product p);
+        bool DeleteProductsById(int ProductID);
         Product GetProductsById(int ProductID);
-        int UpdateCProductsById(Product p);
+        bool UpdateCProductsById(Product p);
     }
 }
