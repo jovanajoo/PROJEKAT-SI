@@ -36,6 +36,7 @@ namespace PresentationLayer
                 if (c != null)
                 {
                     MessageBox.Show("You have successfully logged in");
+                    Form1.currentCustomer = c;
                 }
                 else
                 {
