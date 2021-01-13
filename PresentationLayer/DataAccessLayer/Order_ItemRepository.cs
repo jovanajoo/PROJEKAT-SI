@@ -41,7 +41,7 @@ namespace DataAccessLayer
         }
         public int InsertOrderItems(Order_Item oi)
         {
-            var result = DBConnection.EditData(string.Format("INSERT INTO Order_Items VALUES({0})",oi.Quantity));
+            var result = DBConnection.EditData(string.Format("INSERT INTO Order_Items VALUES({0},'{1}', '{2}')",oi.Quantity,oi.ProductID,oi.OrderID));
             DBConnection.CloseConnection();
             return result;
             

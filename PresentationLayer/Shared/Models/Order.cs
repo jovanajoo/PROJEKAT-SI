@@ -10,7 +10,7 @@ namespace Shared.Models
     {
         public int OrderID { get; set; }
         public int CustomerID { get; set; }
-        public string Order_Date { get; set; }
-        public string Delivery_Date { get; set; }
+        public DateTime Order_Date { get; set; }
+        public DateTime Delivery_Date { get; set; }
     }
 }
