@@ -55,8 +55,8 @@ namespace DataAccessLayer
        
         public int UpdateCProductsById(Product p)
         {
-                var result = DBConnection.EditData(string.Format(" UPDATE Products SET Name = '{0}', Price = {1},Size ={2},Description ='{3}', CategoryId = '{4}'"
-                , p.Name,p.Price,p.Size,p.Description,p.CategoryID));
+                var result = DBConnection.EditData(string.Format("UPDATE Products SET Name = '{0}', Price ='{1}' ,Size ='{2}' ,Description ='{3}', CategoryID = '{4}' WHERE ProductID = '{5}'"
+                , p.Name,p.Price,p.Size,p.Description,p.CategoryID,p.ProductID));
 
             DBConnection.CloseConnection();
             return result;
