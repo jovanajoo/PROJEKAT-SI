@@ -1,4 +1,5 @@
-﻿using BusinessLayer;
+﻿using Bunifu.UI.WinForms;
+using BusinessLayer;
 using Shared.Interfaces.Business;
 using Shared.Models;
 using System;
@@ -29,12 +30,11 @@ namespace PresentationLayer
         }
         private void bunifuButtonRegistration_Click(object sender, EventArgs e)
         {
-            if (CheckTextBox())
-            {
-
+            if (CheckTextBox()) 
+            { 
                 Customer c = new Customer()
                 {
-                    Username = bunifuTextBoxUserName.Text,
+                    UserName = bunifuTextBoxUserName.Text,
                     Name = bunifuTextBoxNameS.Text,
                     Email = bunifuTextBoxEmail.Text,
                     City = bunifuTextBoxCity.Text,
@@ -45,27 +45,27 @@ namespace PresentationLayer
 
                 if (this.customerBusiness.InsertCustomers(c))
                 {
-                    MessageBox.Show("Uspesna registracija");
+                    MessageBox.Show("Successful registration");
                     this.DialogResult = DialogResult.OK;
                 }
                 else
                 {
-                    MessageBox.Show("Greska");
+                    MessageBox.Show("Eror");
                 }
             }
         }
         private bool CheckTextBox()
         {
-            TextBox tb = this.Controls.OfType<TextBox>().FirstOrDefault(c => c.Text.Length == 0);
-            if (tb != null)
+            BunifuTextBox bf = this.Controls.OfType<BunifuTextBox>().FirstOrDefault(c => c.Text.Length == 0);
+            if(bf != null)
             {
-                tb.Focus();
-                MessageBox.Show("Popunite sva polja");
+                bf.Focus();
+                MessageBox.Show("You need to fill texbox");
                 return false;
             }
             return true;
         }
-
+      
         private void bunifuButtonL_Click(object sender, EventArgs e)
         {
             this.Hide();

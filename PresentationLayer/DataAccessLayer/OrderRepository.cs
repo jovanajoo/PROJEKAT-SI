@@ -44,8 +44,8 @@ namespace DataAccessLayer
         {
             using (SqlConnection sqlConnection = new SqlConnection(Constants.connectionString))
             {       
-                var result = DBConnection.EditData(string.Format("INSERT INTO Orders VALUES('{0}', '{1}')",
-                    o.Delivery_Date,o.Delivery_Date));
+                var result = DBConnection.EditData(string.Format("INSERT INTO Orders VALUES('{0}', '{1}', '{2}')",
+                    o.Order_Date,o.Delivery_Date, o.CustomerID));
                 DBConnection.CloseConnection();
                 return result;
             }
