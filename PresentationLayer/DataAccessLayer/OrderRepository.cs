@@ -21,8 +21,8 @@ namespace DataAccessLayer
                     Order o = new Order();
                     o.OrderID = sqlDataReader.GetInt32(0);
                     o.CustomerID = sqlDataReader.GetInt32(1);
-                    o.Order_Date = sqlDataReader.GetString(2);
-                    o.Delivery_Date = sqlDataReader.GetString(3);
+                    o.Order_Date = sqlDataReader.GetDateTime(2);
+                    o.Delivery_Date = sqlDataReader.GetDateTime(3);
                   
                     results.Add(o);
                 
@@ -58,6 +58,15 @@ namespace DataAccessLayer
 
             DBConnection.CloseConnection();
 
+            return result;
+        }
+        public int GetNewOrder()
+        {
+            SqlDataReader sqlDataReader = DBConnection.GetData(string.Format("SELECT IDENT_CURRENT('Orders')"));
+
+            sqlDataReader.Read();
+            var result = Convert.ToInt32(sqlDataReader[0]);
+            DBConnection.CloseConnection();
             return result;
         }
        

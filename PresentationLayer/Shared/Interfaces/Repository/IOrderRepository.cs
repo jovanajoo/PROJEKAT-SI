@@ -13,5 +13,6 @@ namespace Shared.Interfaces.Repository
         int DeleteOrdersById(int OrderID);
         int InsertOrders(Order o);
         int UpdateOrdersById(Order o);
+        int GetNewOrder();
     }
 }
