@@ -72,7 +72,7 @@ namespace BusinessLayer
 
         public int GetNewOrder()
         {
-            return.this.orderRepository.GetNewOrder();
+            return this.orderRepository.GetNewOrder();
         }
 
 
