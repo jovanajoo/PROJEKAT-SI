@@ -21,7 +21,7 @@ namespace DataAccessLayer
                 {
                     Customer c = new Customer();
                     c.CustomerID = sqlDataReader.GetInt32(0);
-                    c.Username = sqlDataReader.GetString(1);
+                    c.UserName = sqlDataReader.GetString(1);
                     c.Name = sqlDataReader.GetString(2);
                     c.Email = sqlDataReader.GetString(3);
                     c.City = sqlDataReader.GetString(4);
@@ -44,7 +44,7 @@ namespace DataAccessLayer
         public int InsertCustomers(Customer c)
         {
             var result = DBConnection.EditData(string.Format("INSERT INTO Customers VALUES('{0}', '{1}','{2}', '{3}','{4}', '{5}', '{6}')"
-                    ,c.Username,c.Name, c.Email, c.City, c.Address, c.PhoneNumber,c.Password));
+                    ,c.UserName,c.Name, c.Email, c.City, c.Address, c.PhoneNumber,c.Password));
 
             DBConnection.CloseConnection();
             return result;
@@ -53,7 +53,7 @@ namespace DataAccessLayer
         public int UpdateCustomersById(Customer c)
         {
             var result = DBConnection.EditData(string.Format(" UPDATE Customers SET Name = '{0}', Surname = '{1}',Email ='{2}',City ='{3}', Address='{4}', PhoneNumber= '{5}' Password='{6}', WHERE CustomerID={2}"
-                , c.Username, c.Name, c.Email, c.City, c.Address, c.PhoneNumber,c.Password));
+                , c.UserName, c.Name, c.Email, c.City, c.Address, c.PhoneNumber,c.Password));
             
             DBConnection.CloseConnection();
             return result;

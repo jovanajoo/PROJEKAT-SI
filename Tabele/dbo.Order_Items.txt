@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Order_Items] (
+    [Quantity]  NVARCHAR (50) NOT NULL,
+    [ProductID] INT           NOT NULL,
+    [OrderID]   INT           NOT NULL,
+    CONSTRAINT [PK_Order_Items] PRIMARY KEY CLUSTERED ([OrderID] ASC, [ProductID] ASC),
+    CONSTRAINT [FK_Order_Items_Orders] FOREIGN KEY ([OrderID]) REFERENCES [dbo].[Orders] ([OrderID])
+);
+
