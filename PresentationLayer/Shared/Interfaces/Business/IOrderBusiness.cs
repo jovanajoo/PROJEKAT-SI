@@ -14,5 +14,6 @@ namespace Shared.Interfaces.Business
         bool DeleteOrdersById(int OrderID);
         Order GetOrdersById(int OrderID);
         bool UpdateOrdersById(Order o);
+        int GetNewOrder();
     }
 }
