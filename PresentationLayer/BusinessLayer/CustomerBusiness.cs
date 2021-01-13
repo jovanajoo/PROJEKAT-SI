@@ -74,7 +74,7 @@ namespace BusinessLayer
         {
             return this.customerRepository.GetAllCustomers().FirstOrDefault(c =>
             {
-                if (c.Username == User && c.Password == Pass)
+                if (c.UserName == User && c.Password == Pass)
                 {
                     return true;
                 }
